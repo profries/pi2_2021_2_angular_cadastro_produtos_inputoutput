@@ -1,0 +1,14 @@
+<h3>{{titulo}}</h3>
+<table *ngIf="listaProdutos.length > 0">
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>PREÇO</th>
+    </tr>
+    <tr *ngFor="let prod of listaProdutos">
+        <td>{{prod.id}}</td>
+        <td>{{prod.nome}}</td>
+        <td>{{prod.preco}}</td>
+    </tr> 
+</table>
+<p *ngIf="listaProdutos.length <= 0">Nao ha produtos cadastrados!</p>
